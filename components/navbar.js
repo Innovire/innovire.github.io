@@ -56,7 +56,7 @@ export default function Navbar() {
                 <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row mt-3 lg:mt-0 lg:text-lg ml-auto`}>
                     {menuItems.map((menuItem, i) => (
                         <Link
-                            className="text-[#454646] hover:text-white p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors"
+                            className="text-[#454646] hover:text-[#004BC8] p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors"
                             href={menuItem.path}
                             key={i}
                         >
