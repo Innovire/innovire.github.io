@@ -3,9 +3,9 @@ import Navbar from "@/components/navbar";
 
 export default function App({ Component, pageProps }) {
   return (
-      <>
+      <div className="overflow-x-hidden">
         <Navbar />
         <Component {...pageProps} />
-      </>
+      </div>
   )
 }

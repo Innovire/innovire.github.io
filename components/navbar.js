@@ -65,8 +65,8 @@ export default function Navbar() {
                     ))}
 
                     <Link
-                       className="text-white bg-[#004BC8] duration-[450ms] ease-out hover:bg-[#89B5FF] text-center lg:ml-5 lg:px-8 py-2 lg:mx-2 rounded"
-                       href="/sponsorship"
+                        className="text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center lg:ml-5 lg:px-8 py-2 lg:mx-2 rounded"
+                        href="/sponsorship"
                     >
                         Sponsor Us
                     </Link>
@@ -74,5 +74,4 @@ export default function Navbar() {
             </div>
         </header>
     )
-
 }
