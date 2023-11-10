@@ -38,7 +38,7 @@ export default function Navbar() {
     })
 
     return (
-        <header className={`flex py-2 lg:py-5 w-screen transition-colors duration-400 font-karla font-bold ${navBg || showDropdown ? 'bg-white shadow-xl' : 'bg-transparent'} `}>
+        <header className={`flex py-2 lg:py-5 w-screen transition-colors duration-400 font-karla font-bold fixed ${navBg || showDropdown ? 'bg-white shadow-xl' : 'bg-transparent'} `}>
             <div className="px-10 lg:flex w-full">
                 <div className="flex justify-between">
                     <Link href="/" className="flex flex-row items-center font-bold text-xl mr-auto">
@@ -64,11 +64,10 @@ export default function Navbar() {
                         </Link>
                     ))}
 
-                    <Link
-                        className="text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center lg:ml-5 lg:px-8 py-2 lg:mx-2 rounded"
-                        href="/sponsorship"
-                    >
-                        Sponsor Us
+                    <Link href="/sponsorship">
+                        <button className="text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center lg:ml-5 lg:px-8 py-2 lg:mx-2 rounded">
+                            Sponsor Us
+                        </button>
                     </Link>
                 </div>
             </div>

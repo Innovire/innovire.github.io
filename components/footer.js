@@ -2,6 +2,11 @@ import Logo from "@/public/logo/white.png";
 import Image from "next/image";
 
 export default function Footer() {
+    // Returns the year for the copyright
+    const getYear = () => {
+        return new Date().getFullYear()
+    }
+
     return (
         <footer className="bg-black text-white p-20 font-karla font-semibold text-md">
             {/* Footer items */}
@@ -38,7 +43,7 @@ export default function Footer() {
             {/* Copyright */}
             <div className="text-gray-400">
                 <hr />
-                <p className="text-sm mt-5">© 2023 Innovire, All Rights Reserved</p>
+                <p className="text-sm mt-5">© {getYear()} Innovire, All Rights Reserved</p>
             </div>
         </footer>
     )
