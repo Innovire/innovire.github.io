@@ -9,7 +9,7 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col w-2/4 gap-y-10 font-karla font-extrabold">
+        <form onSubmit={handleSubmit} className="flex flex-col w-full md:w-3/4 lg:w-2/4 gap-y-10 font-karla font-extrabold">
             <div className="flex flex-col">
                 <label htmlFor="email" className="pb-2 font-raleway font-bold text-xl">Name</label>
                 <input
