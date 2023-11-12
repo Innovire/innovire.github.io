@@ -20,7 +20,7 @@ export default function Sponsorship() {
             </div>
 
             {/* WHY SPONSOR */}
-            <div className="flex flex-col p-20 pt-20">
+            <div className="flex flex-col p-20 pt-40">
                 <h1 className="text-6xl font-bold">Why Should You Sponsor Us?</h1>
                 <p className="font-karla font-semibold leading-loose text-xl text-gray-500 pt-10">
                     Innovire’s ambitions are always growing, looking for ways to reach a greater number of youth and
