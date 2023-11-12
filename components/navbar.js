@@ -8,7 +8,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 const menuItems = [
     {
         name: "About Us",
-        path: "/about-us"
+        path: "/about"
     },
     {
         name: "Get Involved",
@@ -65,7 +65,7 @@ export default function Navbar() {
                     ))}
 
                     <Link href="/sponsorship">
-                        <button className="text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center lg:ml-5 lg:px-8 py-2 lg:mx-2 rounded">
+                        <button className="rounded bg-[#004BC8] text-white text-center hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] py-2 my-2 px-3 md:my-0 md:ml-5 md:px-8 md:mx-2">
                             Sponsor Us
                         </button>
                     </Link>

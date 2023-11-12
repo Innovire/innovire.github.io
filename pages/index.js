@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { Client } from "@notionhq/client";
 import Link from "next/link";
+import Layout from "@/components/layout";
 
 export const notion = new Client ({ auth: process.env.NOTION_API_KEY });
 
 export default function Home({ partners }) {
     return (
-        <div className="font-raleway">
+        <Layout className="font-raleway">
             {/* HERO */}
-            <header className="flex p-10 gap-5 flex-col items-center lg:flex-row lg:p-20 lg:pt-40 lg:items-left">
+            <header className="flex p-20 gap-5 flex-col items-center lg:flex-row lg:pt-40 lg:items-left">
                 <div className="flex-col items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-6xl lg:text-8xl font-bold">
                         Where Innovation Meets Inspiration.
@@ -140,7 +141,7 @@ export default function Home({ partners }) {
                     </button>
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 
