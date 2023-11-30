@@ -68,7 +68,7 @@ export default function GetInvolved() {
                         button below to see all our available opportunities.
                     </p>
 
-                    <button className="font-karla text-2xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
+                    <button className="font-karla text-2xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_17rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
                         See Opportunities
                     </button>
                 </div>
