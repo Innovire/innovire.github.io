@@ -19,7 +19,9 @@ export default function Home({ partners }) {
                         world through STEM.
                     </p>
                     <button className="font-karla text-2xl font-extrabold py-4 px-7 my-10 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
-                        Get Started
+                        <Link href="/#about">
+                            Get Started
+                        </Link>
                     </button>
                 </div>
                 <div className="flex flex-col w-2/3 items-end">
@@ -28,7 +30,7 @@ export default function Home({ partners }) {
             </header>
 
             {/* WHAT WE DO */}
-            <div className="flex flex-col items-center px-10 py-20 lg:p-20 lg:flex-row font-karla font-semibold bg-blue-600 gap-20">
+            <div id="about" className="flex flex-col items-center px-10 py-20 lg:p-20 lg:flex-row font-karla font-semibold bg-blue-600 gap-20">
                 {/* Heading and text */}
                 <div className="lg:items-start w-3/4 lg:w-1/2 lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-6xl lg:text-7xl text-white font-bold">What we do.</h1>
@@ -40,7 +42,9 @@ export default function Home({ partners }) {
                     </p>
 
                     <button className="text-2xl border py-4 px-7 my-5 text-white hover:text-black hover:shadow-[inset_13rem_0_0_0] hover:shadow-white duration-[200ms,700ms] transition-[color,box-shadow] text-center rounded">
-                        Learn More
+                        <Link href="/about">
+                            Learn More
+                        </Link>
                     </button>
                 </div>
 
@@ -137,7 +141,9 @@ export default function Home({ partners }) {
                     </p>
 
                     <button className="font-karla text-2xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
-                        Get Involved
+                        <Link href="/get-involved">
+                            Get Involved
+                        </Link>
                     </button>
                 </div>
             </div>
