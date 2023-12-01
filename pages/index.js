@@ -10,7 +10,7 @@ export default function Home({ partners }) {
         <Layout className="font-raleway">
             {/* HERO */}
             <header className="flex p-10 pt-20 lg:p-20 lg:pt-40 gap-5 flex-col items-center lg:flex-row lg:items-left">
-                <div className="flex-col items-center justify-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
+                <div className="flex-col place-items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-5xl lg:text-7xl font-bold">
                         Where Innovation Meets Inspiration.
                     </h1>
@@ -52,7 +52,7 @@ export default function Home({ partners }) {
                 <div className="lg:w-1/2 h-full grid grid-cols-1 lg:grid-cols-2 gap-5">
                     <div className="w-full h-full bg-white rounded-md">
                         <div className="m-8">
-                            <div className="flex bg-red-100 rounded-full h-20 w-20 items-center justify-center">
+                            <div className="flex bg-red-100 rounded-full h-20 w-20 place-items-center">
                                 <img src="/icons/layout-red.png" className="p-5" alt="Layout Icon"/>
                             </div>
                             <h1 className="text-2xl pt-2">Conferences</h1>
@@ -64,7 +64,7 @@ export default function Home({ partners }) {
 
                     <div className="w-full h-full bg-white rounded-md">
                         <div className="m-8">
-                            <div className="flex bg-yellow-100 rounded-full h-20 w-20 items-center justify-center">
+                            <div className="flex bg-yellow-100 rounded-full h-20 w-20 place-items-center">
                                 <img src="/icons/sidebar-yellow.png" className="p-5" alt="Sidebar Icon" />
                             </div>
                             <h1 className="text-2xl pt-2">Workshops</h1>
@@ -76,7 +76,7 @@ export default function Home({ partners }) {
 
                     <div className="w-full h-full bg-white rounded-md">
                         <div className="m-8">
-                            <div className="flex bg-blue-100 rounded-full h-20 w-20 items-center justify-center">
+                            <div className="flex bg-blue-100 rounded-full h-20 w-20 place-items-center">
                                 <img src="/icons/bookmark-blue.png" className="p-5" alt="Bookmark Icon" />
                             </div>
                             <h1 className="text-2xl pt-2">Classes</h1>
@@ -88,7 +88,7 @@ export default function Home({ partners }) {
 
                     <div className="w-full h-full bg-white rounded-md">
                         <div className="m-8">
-                            <div className="flex bg-gray-100 rounded-full h-20 w-20 items-center justify-center">
+                            <div className="flex bg-gray-100 rounded-full h-20 w-20 place-items-center">
                                 <img src="/icons/chat-black.png" className="p-5" alt="Chat Icon" />
                             </div>
                             <h1 className="text-2xl pt-2">Service</h1>

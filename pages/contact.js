@@ -43,13 +43,13 @@ export default function Contact() {
                         Have any burning questions you want to ask us? Contact us here to get a quick response.
                     </p>
                 </div>
-                <div className="flex flex-col w-full lg:w-1/2 items-end justify-center">
+                <div className="flex flex-col w-full lg:w-1/2 items-end place-items-center">
                     <Image height={700} width={700} src="/images/undraw_mail.svg" className="w-[80%] h-[70%]" />
                 </div>
             </div>
 
             {/* SEND US A MESSAGE */}
-            <div className="flex flex-col p-10 lg:p-20 gap-y-10 items-center justify-center">
+            <div className="flex flex-col p-10 lg:p-20 gap-y-10 place-items-center">
                 <h1 className="text-4xl text-center font-bold">Send Us A Message</h1>
                 <ContactForm />
             </div>

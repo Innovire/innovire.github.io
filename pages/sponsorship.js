@@ -4,12 +4,12 @@ export default function Sponsorship() {
     return (
         <Layout>
             {/* HERO */}
-            <div className="flex p-20 lg:pt-60 gap-5 flex-col items-center lg:flex-row lg:items-left">
+            <div className="flex p-10 pt-20 lg:p-20 lg:pt-40 gap-5 flex-col items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-6xl lg:text-8xl font-bold">
+                    <h1 className="text-5xl lg:text-7xl font-bold">
                         Sponsor Us.
                     </h1>
-                    <p className="font-karla font-semibold leading-loose text-2xl text-gray-500 pt-10">
+                    <p className="font-karla font-semibold leading-loose text-xl text-gray-500 pt-10">
                         Sponsoring us is the best way of supporting us in our endeavours into helping communities
                         through STEM.
                     </p>
@@ -20,9 +20,9 @@ export default function Sponsorship() {
             </div>
 
             {/* WHY SPONSOR */}
-            <div className="flex flex-col p-20 pt-40">
-                <h1 className="text-6xl font-bold">Why Should You Sponsor Us?</h1>
-                <p className="font-karla font-semibold leading-loose text-xl text-gray-500 pt-10">
+            <div className="flex flex-col p-20">
+                <h1 className="text-4xl font-bold">Why Should You Sponsor Us?</h1>
+                <p className="font-karla font-semibold leading-loose text-pg text-gray-500 pt-10">
                     Innovire’s ambitions are always growing, looking for ways to reach a greater number of youth and
                     make a bigger impact all the time. We have met, worked with, learned from and have been supported
                     by various people and organizations throughout our journey. To achieve our ambitions we are always
@@ -50,7 +50,7 @@ export default function Sponsorship() {
 
             {/* SPONSORSHIP PACKAGE */}
             <div>
-                <iframe
+                <embed
                     src="/pdfs/2022%20Innovire%20Sponsorship%20Package.pdf"
                     className="p-20 w-full h-[1000px]"
                 />
