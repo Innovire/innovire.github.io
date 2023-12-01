@@ -141,7 +141,7 @@ export default function Home({ partners }) {
                     </p>
 
                     <button className="font-karla text-xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
-                        <Link href="/get-involved/index">
+                        <Link href="/get-involved">
                             Get Involved
                         </Link>
                     </button>
