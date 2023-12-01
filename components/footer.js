@@ -10,8 +10,8 @@ export default function Footer() {
     return (
         <footer className="bg-black text-white p-10 lg:p-20 font-karla font-semibold text-md">
             {/* Footer items */}
-            <div className="grid grid-cols-12 mb-20 sm:gap-y-10">
-                <Image src={Logo} width={124} height={64} className="col-span-12 lg:col-span-2"/>
+            <div className="grid grid-cols-12 mb-20">
+                <Image src={Logo} width={124} height={64} className="col-span-12 lg:col-span-2 sm:mb-5" />
                 <div className="grid grid-cols-2 lg:grid-cols-4 col-span-12 lg:col-span-10 gap-y-10 gap-x-20 lg:gap-x-5">
                     <div className="space-y-4">
                         <h1 className="mb-7">About</h1>
