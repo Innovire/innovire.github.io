@@ -65,7 +65,7 @@ export default function Navbar() {
                     ))}
 
                     <Link href="/sponsorship">
-                        <button className="rounded bg-[#004BC8] text-white text-center hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] py-2 my-2 px-3 md:my-0 md:ml-5 md:px-8 md:mx-2">
+                        <button className="rounded bg-[#004BC8] text-white text-center hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] py-2 my-2 px-3 lg:my-0 lg:ml-5 md:px-8 md:mx-2">
                             Sponsor Us
                         </button>
                     </Link>
