@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
         karla: ['Karla', 'sans-serif']
+      },
+      fontSize: {
+        pg: "1.2rem"
       }
     }
   },

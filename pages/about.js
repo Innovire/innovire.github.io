@@ -6,12 +6,12 @@ export default function About({ team }) {
     return (
         <Layout>
             {/* ABOUT US */}
-            <div className="flex p-10 pt-20 lg:p-20 lg:pt-40 gap-10 flex-col items-center lg:flex-row lg:items-left">
+            <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 gap-10 items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center lg:items-start w-full lg:w-[55%] text-center lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-5xl lg:text-7xl font-bold">
                         About Us.
                     </h1>
-                    <p className="font-karla font-semibold leading-loose text-[1.2rem] text-gray-500 pt-10">
+                    <p className="font-karla font-semibold leading-loose text-pg text-gray-500 pt-10">
                         Innovire is a registered non-profit organization consisting of a group of
                         ambitious youth between the ages 13-18, who strive to create an impact in
                         this world by creating and sharing opportunities for ALL youth in an attempt
@@ -37,7 +37,7 @@ export default function About({ team }) {
                 </div>
 
                 <div className="flex flex-col w-full lg:w-[45%] items-end justify-center">
-                    <p className="font-karla font-semibold lg:w-[85%] leading-loose text-[1.2rem] text-gray-500">
+                    <p className="font-karla font-semibold lg:w-[85%] leading-loose text-pg text-gray-500">
                         Our team recognized that often high rewarding opportunities were only
                         accessed by people with increased privileges and better resources and
                         through Innovire, we want all youth to benefit no matter their background
