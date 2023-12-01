@@ -6,12 +6,12 @@ export default function About({ team }) {
     return (
         <Layout>
             {/* ABOUT US */}
-            <div className="flex p-20 lg:pt-40 gap-5 flex-col items-center lg:flex-row lg:items-left">
+            <div className="flex p-10 pt-20 lg:p-20 lg:pt-40 gap-10 flex-col items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center lg:items-start w-full lg:w-[55%] text-center lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-6xl lg:text-8xl font-bold">
+                    <h1 className="text-5xl lg:text-7xl font-bold">
                         About Us.
                     </h1>
-                    <p className="font-karla font-semibold leading-loose text-[1.3rem] text-gray-500 pt-10">
+                    <p className="font-karla font-semibold leading-loose text-[1.2rem] text-gray-500 pt-10">
                         Innovire is a registered non-profit organization consisting of a group of
                         ambitious youth between the ages 13-18, who strive to create an impact in
                         this world by creating and sharing opportunities for ALL youth in an attempt
@@ -24,20 +24,20 @@ export default function About({ team }) {
                     </p>
                 </div>
                 <div className="flex flex-col w-full lg:w-[45%] items-end justify-center">
-                    <img src="/images/undraw_team.svg" className="w-[90%] h-[70%]" alt="Team"/>
+                    <Image src="/images/undraw_team.svg" height={700} width={700} />
                 </div>
             </div>
 
             {/* MISSION */}
-            <div className="flex flex-col lg:flex-row p-20 gap-5 lg:pt-40 lg:items-left">
+            <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 lg:flex-row gap-5 lg:items-left">
                 <div className="flex-col lg:items-start w-full lg:w-[55%] lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-5xl lg:text-8xl font-bold">
+                    <h1 className="text-5xl lg:text-7xl font-bold">
                         Our mission is to empower youth.
                     </h1>
                 </div>
 
                 <div className="flex flex-col w-full lg:w-[45%] items-end justify-center">
-                    <p className="font-karla font-semibold lg:w-[85%] leading-loose text-[1.3rem] text-gray-500">
+                    <p className="font-karla font-semibold lg:w-[85%] leading-loose text-[1.2rem] text-gray-500">
                         Our team recognized that often high rewarding opportunities were only
                         accessed by people with increased privileges and better resources and
                         through Innovire, we want all youth to benefit no matter their background
@@ -51,8 +51,8 @@ export default function About({ team }) {
             </div>
 
             {/* IMAGES */}
-            <div className="flex flex-col lg:flex-row gap-10 p-20">
-                <img src="/images/summit2023.JPG" className="rounded lg:w-1/2" alt="2023 Innovire Summit"/>
+            <div className="flex flex-col p-10 pt-20 lg:p-20 lg:flex-row gap-10">
+                <img src="/images/summit2023.JPG" className="rounded lg:w-1/2" alt="Innovire at the 2023 Summit" />
                 <img src="/images/team.jpg" className="rounded lg:w-1/2" alt="Innovire Team" />
             </div>
 
@@ -61,7 +61,7 @@ export default function About({ team }) {
                 <h1 className="text-6xl font-bold">
                     Meet the Committee
                 </h1>
-                <p className="font-karla font-semibold lg:w-2/4 text-2xl text-gray-500 pt-10">
+                <p className="font-karla font-semibold lg:w-2/4 text-xl text-gray-500 pt-10">
                     We have over 30 driven members in the team. Here are the ones who bring it all together.
                 </p>
 

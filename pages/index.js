@@ -9,7 +9,7 @@ export default function Home({ partners }) {
     return (
         <Layout className="font-raleway">
             {/* HERO */}
-            <header className="flex p-10 gap-5 flex-col items-center lg:flex-row lg:p-20 lg:pt-40 lg:items-left">
+            <header className="flex p-10 pt-20 lg:p-20 lg:pt-40 gap-5 flex-col items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center justify-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-5xl lg:text-7xl font-bold">
                         Where Innovation Meets Inspiration.
