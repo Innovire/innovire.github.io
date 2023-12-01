@@ -9,23 +9,23 @@ export default function Home({ partners }) {
     return (
         <Layout className="font-raleway">
             {/* HERO */}
-            <header className="flex p-20 gap-5 flex-col items-center lg:flex-row lg:pt-40 lg:items-left">
-                <div className="flex-col items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-6xl lg:text-8xl font-bold">
+            <header className="flex p-10 gap-5 flex-col items-center lg:flex-row lg:p-20 lg:pt-40 lg:items-left">
+                <div className="flex-col items-center justify-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
+                    <h1 className="text-5xl lg:text-7xl font-bold">
                         Where Innovation Meets Inspiration.
                     </h1>
-                    <p className="font-karla font-semibold text-2xl text-gray-500 pt-10">
+                    <p className="font-karla font-semibold text-xl text-gray-500 pt-10">
                         We're a group of ambitious and passionate youth aiming to make an impact on this
                         world through STEM.
                     </p>
-                    <button className="font-karla text-2xl font-extrabold py-4 px-7 my-10 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
+                    <button className="font-karla text-xl font-extrabold py-4 px-7 my-10 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
                         <Link href="/#about">
                             Get Started
                         </Link>
                     </button>
                 </div>
                 <div className="flex flex-col w-2/3 items-end">
-                    <img src="/images/hero-powerful.svg" className="w-[90%] h-[70%]" alt=""/>
+                    <Image src="/images/hero-powerful.svg" height={700} width={700}/>
                 </div>
             </header>
 
@@ -33,15 +33,15 @@ export default function Home({ partners }) {
             <div id="about" className="flex flex-col items-center px-10 py-20 lg:p-20 lg:flex-row font-karla font-semibold bg-blue-600 gap-20">
                 {/* Heading and text */}
                 <div className="lg:items-start w-3/4 lg:w-1/2 lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-6xl lg:text-7xl text-white font-bold">What we do.</h1>
+                    <h1 className="text-5xl lg:text-6xl text-white font-bold">What we do.</h1>
 
-                    <p className="text-2xl leading-relaxed text-blue-200 mt-2 pt-3 pb-5">
+                    <p className="text-xl leading-relaxed text-blue-200 mt-2 pt-3 pb-5">
                         We've realized that the real changemakers are the ones who understand the world around them and
                         use it to create innovative technologies. We aim to inspire future generations to pursue STEM
                         and build world-changing tools.
                     </p>
 
-                    <button className="text-2xl border py-4 px-7 my-5 text-white hover:text-black hover:shadow-[inset_13rem_0_0_0] hover:shadow-white duration-[200ms,700ms] transition-[color,box-shadow] text-center rounded">
+                    <button className="text-xl border py-4 px-7 my-5 text-white hover:text-black hover:shadow-[inset_13rem_0_0_0] hover:shadow-white duration-[200ms,700ms] transition-[color,box-shadow] text-center rounded">
                         <Link href="/about">
                             Learn More
                         </Link>
@@ -108,7 +108,7 @@ export default function Home({ partners }) {
             {/* PARTNERS */}
             <div className="w-full p-16 md:p-24 lg:p-30 pt-20">
                 <h1 className="text-5xl text-center text-black font-bold">Affiliated With</h1>
-                <div className="mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 py-10">
+                <div className="mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 py-10">
                     {partners.map((partner) => (
                         <Link key={partner.name} href={partner.website}>
                             <Image
@@ -133,14 +133,14 @@ export default function Home({ partners }) {
 
                 {/* Heading and text */}
                 <div className="lg:items-start w-3/4 lg:w-1/2 lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-6xl lg:text-7xl text-black font-bold">Join Us!</h1>
+                    <h1 className="text-5xl lg:text-6xl text-black font-bold">Join Us!</h1>
 
-                    <p className="text-2xl leading-relaxed text-gray-500 mt-2 pt-3 pb-5">
+                    <p className="text-xl leading-relaxed text-gray-500 mt-2 pt-3 pb-5">
                         We're hosting monthly events to help youth explore the various fields of STEM
                         and change the world. Click the button below to check out what we have in store for you.
                     </p>
 
-                    <button className="font-karla text-2xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
+                    <button className="font-karla text-xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
                         <Link href="/get-involved/index">
                             Get Involved
                         </Link>
