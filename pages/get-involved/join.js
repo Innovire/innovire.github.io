@@ -34,7 +34,7 @@ export default function Join({ roles }) {
                     </h1>
                 </div>
                 <div className="flex flex-col w-full lg:w-1/3">
-                    <p className="font-karla font-semibold leading-loose text-pg text-gray-500 pt-5">
+                    <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-5">
                         Innovire is hyper-focused on bringing youth with new opportunities that will
                         help them in all aspects in life.
                     </p>
@@ -50,7 +50,7 @@ export default function Join({ roles }) {
                     </div>
                     <div className="w-4/5">
                         <h1 className="font-raleway font-semibold text-2xl">Volunteer Hours</h1>
-                        <p className="font-karla font-semibold leading-loose text-lg text-gray-500 pt-3">
+                        <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-3">
                             With events every month and five subteams, you could get all your volunteer hours in many ways.
                         </p>
                     </div>
@@ -63,7 +63,7 @@ export default function Join({ roles }) {
                     </div>
                     <div className="w-4/5">
                         <h1 className="font-raleway font-semibold text-2xl">Help Communities</h1>
-                        <p className="font-karla font-semibold leading-loose text-lg text-gray-500 pt-3">
+                        <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-3">
                             We have created impact on over 500 students in the world over three years. With Innovire,
                             you can help people from all backgrounds.
                         </p>
@@ -77,7 +77,7 @@ export default function Join({ roles }) {
                     </div>
                     <div className="w-4/5">
                         <h1 className="font-raleway font-semibold text-2xl">Freedom</h1>
-                        <p className="font-karla font-semibold leading-loose text-lg text-gray-500 pt-3">
+                        <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-3">
                             The ideas and planning come from you! Being a student-run organisation, you can have more
                             say in what gets done.
                         </p>
@@ -91,7 +91,7 @@ export default function Join({ roles }) {
                     </div>
                     <div className="w-4/5">
                         <h1 className="font-raleway font-semibold text-2xl">Make New Friends</h1>
-                        <p className="font-karla font-semibold leading-loose text-lg text-gray-500 pt-3">
+                        <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-3">
                             Innovire is the perfect place to make new friends who have similar interests with a common
                             goal of helping students.
                         </p>
@@ -105,7 +105,7 @@ export default function Join({ roles }) {
                     </div>
                     <div className="w-4/5">
                         <h1 className="font-raleway font-semibold text-2xl">Learn New Skills</h1>
-                        <p className="font-karla font-semibold leading-loose text-lg text-gray-500 pt-3">
+                        <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-3">
                             Innovire is filled with opportunities to learn new skills in the STEM field and pass on the
                             knowledge to students.
                         </p>
@@ -119,7 +119,7 @@ export default function Join({ roles }) {
                     </div>
                     <div className="w-4/5">
                         <h1 className="font-raleway font-semibold text-2xl">Learn New Skills</h1>
-                        <p className="font-karla font-semibold leading-loose text-lg text-gray-500 pt-3">
+                        <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-3">
                             Innovire is a safe space for people of all skill levels and ages to learn, grow and have fun.
                         </p>
                     </div>
