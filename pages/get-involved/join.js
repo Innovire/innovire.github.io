@@ -34,7 +34,7 @@ export default function Join({ roles }) {
                     </h1>
                 </div>
                 <div className="flex flex-col w-full lg:w-1/3">
-                    <p className="font-karla font-semibold leading-loose text-md text-gray-500 pt-5">
+                    <p className="font-karla font-semibold leading-loose text-pg text-gray-500 pt-5">
                         Innovire is hyper-focused on bringing youth with new opportunities that will
                         help them in all aspects in life.
                     </p>
