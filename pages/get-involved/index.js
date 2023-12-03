@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GetInvolved() {
     // Returns the year
@@ -69,7 +70,9 @@ export default function GetInvolved() {
                     </p>
 
                     <button className="font-karla text-xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_17rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
-                        See Opportunities
+                        <Link href="/get-involved/join">
+                            See Opportunities
+                        </Link>
                     </button>
                 </div>
 

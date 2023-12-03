@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 import { useEffect, useState } from "react";
-import {notion} from "@/pages";
+import { notion } from "@/pages";
 
 function PingEffect({ dotColor, pingColor }) {
     const [animation, setAnimation] = useState(true);
