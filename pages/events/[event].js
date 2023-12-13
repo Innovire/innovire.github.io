@@ -121,9 +121,11 @@ export async function getStaticProps(context) {
         signup: response.results[0].properties.Signup?.url || null,
         video: response.results[0].properties.Video?.url || null,
         description: response.results[0].properties.Description?.rich_text[0].plain_text,
-        presenters: response.results[0].properties.Presenters?.rich_text[0].plain_text || null,
-        mentors: response.results[0].properties.Mentors?.rich_text[0].plain_text || null
+        presenters: response.results[0].properties.Presenters.rich_text[0]?.plain_text || null,
+        mentors: response.results[0].properties.Mentors.rich_text[0]?.plain_text || null
     };
+
+    console.log(eventDetails)
 
     return {
         props: {
