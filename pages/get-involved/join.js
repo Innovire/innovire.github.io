@@ -127,7 +127,7 @@ export default function Join({ roles }) {
             </div>
 
             {/* OPEN ROLES */}
-            <div className="flex flex-col bg-gray-100 items-center text-center px-20 py-20">
+            <div className="flex flex-col px-10 lg:px-20 py-20 bg-gray-100 items-center text-center">
                 <h1 className="text-6xl font-bold">Open Roles</h1>
                 <p className="font-karla font-semibold lg:w-2/4 text-xl text-gray-500 pt-10">
                     Click on each tab to see the application. Note that some roles may not have spots open.

@@ -15,8 +15,8 @@ const menuItems = [
         path: "/get-involved"
     },
     {
-        name: "Updates",
-        path: "/updates"
+        name: "Events",
+        path: "/events"
     },
     {
         name: "Contact Us",
