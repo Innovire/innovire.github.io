@@ -114,16 +114,15 @@ export async function getStaticProps(context) {
 
     // Add the necessary information to eventDetails
     const eventDetails = {
-        name: response.results[0].properties.Name.title[0].text.content,
-        path: response.results[0].properties.Path.rich_text[0].plain_text,
-        status: response.results[0].properties.Status.status.name,
-        date: response.results[0].properties.Date.date.start,
-        coverImg: response.results[0].properties.Cover.url,
-        signup: response.results[0].properties.Signup.url || null,
-        video: response.results[0].properties.Video.url || null,
-        description: response.results[0].properties.Description.rich_text[0].plain_text,
-        presenters: response.results[0].properties.Presenters.rich_text[0].plain_text || null,
-        mentors: response.results[0].properties.Mentors.rich_text[0].plain_text || null
+        name: response.results[0].properties.Name.title[0]?.text.content,
+        path: response.results[0].properties.Path?.rich_text[0].plain_text,
+        status: response.results[0].properties.Status.status?.name,
+        date: response.results[0].properties.Date.date?.start,
+        signup: response.results[0].properties.Signup?.url || null,
+        video: response.results[0].properties.Video?.url || null,
+        description: response.results[0].properties.Description?.rich_text[0].plain_text,
+        presenters: response.results[0].properties.Presenters?.rich_text[0].plain_text || null,
+        mentors: response.results[0].properties.Mentors?.rich_text[0].plain_text || null
     };
 
     return {
