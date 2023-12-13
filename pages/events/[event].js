@@ -119,11 +119,11 @@ export async function getStaticProps(context) {
         status: response.results[0].properties.Status.status.name,
         date: response.results[0].properties.Date.date.start,
         coverImg: response.results[0].properties.Cover.url,
-        signup: response.results[0].properties.Signup?.url || null,
-        video: response.results[0].properties.Video?.url || null,
+        signup: response.results[0].properties.Signup.url || "null",
+        video: response.results[0].properties.Video.url || null,
         description: response.results[0].properties.Description.rich_text[0].plain_text,
-        presenters: response.results[0].properties.Presenters.rich_text[0]?.plain_text || null,
-        mentors: response.results[0].properties.Mentors.rich_text[0]?.plain_text || null
+        presenters: response.results[0].properties.Presenters.rich_text[0].plain_text || null,
+        mentors: response.results[0].properties.Mentors.rich_text[0].plain_text || null
     };
 
     return {

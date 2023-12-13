@@ -59,14 +59,12 @@ export async function getStaticProps() {
         const path = result.properties.Path.rich_text[0].plain_text;
         const status = result.properties.Status.status.name;
         const date = result.properties.Date.date.start;
-        const coverImg = result.properties.Cover.url;
         const description = result.properties.Description.rich_text[0].plain_text;
 
         events[status].push({
             name,
             path,
             date,
-            coverImg,
             description
         })
     })
