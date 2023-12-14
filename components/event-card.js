@@ -16,7 +16,7 @@ export default function EventCard({ details }) {
                     <h2 className="text-md text-blue-500">{details.date}</h2>
                 </div>
                 <div className="h-1/4 w-full px-5 pb-5">
-                    <p className="text-md text-gray-500">{details.description.substring(0, 85)}...</p>
+                    <p className="text-sm text-gray-500">{details.description.substring(0, 85)}...</p>
                 </div>
             </Link>
         </div>
