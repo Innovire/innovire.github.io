@@ -57,9 +57,9 @@ export default function Contact() {
             {/* CONNECT WITH US */}
             <div className="flex flex-col p-12 mx-20 my-20 rounded-md bg-blue-100">
                 <h1 className="text-4xl text-center font-bold">Connect With Us</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-y-5 pt-10">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 pt-10">
                     {socialMedia.map((media) => (
-                        <a target="_blank" rel="noopener noreferrer" key={media.name} href={media.link}>
+                        <a target="_blank" key={media.name} href={media.link}>
                             <Image
                                 src={media.icon}
                                 alt={media.name}

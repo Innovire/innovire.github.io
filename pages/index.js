@@ -32,7 +32,7 @@ export default function Home({ partners }) {
             {/* WHAT WE DO */}
             <div id="about" className="flex flex-col items-center px-10 py-20 lg:p-20 lg:flex-row font-karla font-semibold bg-blue-600 gap-20">
                 {/* Heading and text */}
-                <div className="lg:items-start w-3/4 lg:w-1/2 lg:text-left mb-4 lg:mb-0">
+                <div className="lg:items-start lg:w-1/2 lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-5xl lg:text-6xl text-white font-bold">What we do.</h1>
 
                     <p className="text-xl leading-relaxed text-blue-200 mt-2 pt-3 pb-5">
