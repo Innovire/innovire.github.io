@@ -59,7 +59,7 @@ export default function Event({ event }) {
 
                 {/* IMAGES */}
                 {event?.status === "Past" ? (
-                    <div className="flex flex-auto md:h-[50vh] gap-3">
+                    <div className="flex flex-col md:flex-row md:h-[50vh] gap-3">
                         {images.map((image) => (
                             <CldImage
                                 src={`${event.path}/${image.id}`}
