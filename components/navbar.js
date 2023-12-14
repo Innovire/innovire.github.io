@@ -53,7 +53,7 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row mt-3 lg:mt-0 lg:text-lg ml-auto`}>
+                <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row mt-3 lg:mt-0 lg:text-md ml-auto`}>
                     {menuItems.map((menuItem, i) => (
                         <Link
                             className="text-[#454646] hover:text-[#004BC8] p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors"
