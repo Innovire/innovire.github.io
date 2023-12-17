@@ -12,15 +12,9 @@ export default function About({ team }) {
                         About Us.
                     </h1>
                     <p className="font-karla font-semibold leading-loose text-pg text-gray-500 pt-10">
-                        Innovire is a registered non-profit organization consisting of a group of
-                        ambitious youth between the ages 13-18, who strive to create an impact in
-                        this world by creating and sharing opportunities for ALL youth in an attempt
-                        to inspire them to innovate and become leaders in the world of STEM. Innovire
-                        was founded in 2018 by a few students attending the SciTech Program at Tomken
-                        Road Middle School. Since then the organization and the amazing team that runs
-                        it has grown, with members from various high schools around Peel. We are all
-                        incredibly passionate about STEM, business, leadership and opportunities to
-                        support our community.
+                        Innovire is a registered non-profit organization made up of ambitious youth ages 13-18, who
+                        endeavor to create an impact in the world. Fueled by our passion for STEM and business, we
+                        create opportunities to inspire ALL youth to innovate and become leaders in the world of STEM.
                     </p>
                 </div>
                 <div className="flex flex-col w-full lg:w-[45%] items-end justify-center">
@@ -38,14 +32,9 @@ export default function About({ team }) {
 
                 <div className="flex flex-col w-full lg:w-[45%] items-end justify-center">
                     <p className="font-karla font-semibold lg:w-[85%] leading-loose text-pg text-gray-500">
-                        Our team recognized that often high rewarding opportunities were only
-                        accessed by people with increased privileges and better resources and
-                        through Innovire, we want all youth to benefit no matter their background
-                        or life circumstances. Through Innovire we want to provide the access to
-                        knowledge, resources and opportunities to all youth to help them become
-                        future world leaders that create change in the world by innovating solutions
-                        to world problems. We aim to inspire youth to innovate using technology and
-                        in turn inspire others.
+                        Through Innovire, our mission is to provide all youth with opportunities no matter their
+                        background or life circumstances. We want to help them gain experience in various STEM fields
+                        through interesting and interactive experiences such as camps, workshops and STEM-based games.
                     </p>
                 </div>
             </div>

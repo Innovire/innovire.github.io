@@ -37,7 +37,7 @@ export default function Event({ event }) {
                 {/* STATUS AND DATE */}
                 {event?.status && event?.date ? (
                     <div className="flex-row space-x-5">
-                        <span className={`${event.status === "Future" ? "text-green-600 bg-green-100" : "text-blue-600 bg-blue-100"} py-1 px-3 text-md rounded-md`}>
+                        <span className={`${event.status === "Upcoming" ? "text-green-600 bg-green-100" : "text-blue-600 bg-blue-100"} py-1 px-3 text-md rounded-md`}>
                             {event.status}
                         </span>
                             <span className="text-purple-600 bg-purple-100 py-1 px-3 text-md rounded-md">
@@ -72,7 +72,7 @@ export default function Event({ event }) {
                     </div>
                 ) : null}
 
-                {/*{ VIDEO }*/}
+                {/* VIDEO */}
                 {event?.video ? <iframe className="rounded-lg w-full lg:w-[50%] aspect-video" src={event.video} /> : null}
             </div>
         </Layout>

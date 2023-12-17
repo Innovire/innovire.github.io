@@ -32,7 +32,7 @@ export default function Home({ partners }) {
             {/* WHAT WE DO */}
             <div id="about" className="flex flex-col items-center px-10 py-20 lg:p-20 lg:flex-row font-karla font-semibold bg-blue-600 gap-20">
                 {/* Heading and text */}
-                <div className="lg:items-start lg:w-1/2 lg:text-left mb-4 lg:mb-0">
+                <div className="lg:items-start w-3/4 lg:w-1/2 lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-5xl lg:text-6xl text-white font-bold">What we do.</h1>
 
                     <p className="text-xl leading-relaxed text-blue-200 mt-2 pt-3 pb-5">
@@ -106,9 +106,9 @@ export default function Home({ partners }) {
             </svg>
 
             {/* PARTNERS */}
-            <div className="w-full p-16 md:p-24 lg:p-30 pt-20">
+            <div className="w-full p-16 md:p-24 lg:p-20 pt-20">
                 <h1 className="text-5xl text-center text-black font-bold">Affiliated With</h1>
-                <div className="mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 py-10">
+                <div className="mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-10 py-10">
                     {partners.map((partner) => (
                         <Link key={partner.name} href={partner.website}>
                             <Image
@@ -117,7 +117,7 @@ export default function Home({ partners }) {
                                 quality={100}
                                 height={500}
                                 width={500}
-                                className="h-[70px] w-auto mx-auto object-center hover:brightness-110"
+                                className="h-[40px] w-auto mx-auto object-center hover:brightness-110"
                             />
                         </Link>
                     ))}
