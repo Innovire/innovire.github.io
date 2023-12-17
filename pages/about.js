@@ -25,7 +25,7 @@ export default function About({ team }) {
             {/* MISSION */}
             <div className="flex flex-col p-10 pt-20 lg:p-20 lg:flex-row gap-5 lg:items-left">
                 <div className="flex-col lg:items-start w-full lg:w-[55%] lg:text-left mb-4 lg:mb-0">
-                    <h1 className="text-5xl lg:text-7xl font-bold">
+                    <h1 className="text-4xl lg:text-6xl font-bold">
                         Our mission is to empower youth.
                     </h1>
                 </div>
