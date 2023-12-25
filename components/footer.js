@@ -1,5 +1,74 @@
 import Logo from "@/public/logo/white.png";
 import Image from "next/image";
+import Link from "next/link";
+
+// List of footer items
+const footerItems = [
+    {
+        name: "About",
+        items: [
+            {
+                name: "Our Mission",
+                path: "/about/#mission"
+            },
+            {
+                name: "Team Members",
+                path: "/about/#team"
+            }
+        ]
+    },
+    {
+        name: "Events",
+        items: [
+            {
+                name: "2023 Summit",
+                path: "/events/summit-2023"
+            },
+            {
+                name: "2022 Summit",
+                path: "/events/summit-2022"
+            },
+            {
+                name: "Boat Design",
+                path: "/events/boat-design"
+            },
+            {
+                name: "Thunkable Workshop",
+                path: "/events/thunkable"
+            }
+        ]
+    },
+    {
+        name: "Get Involved",
+        items: [
+            {
+                name: "Participate",
+                path: "/get-involved/#participate"
+            },
+            {
+                name: "Sponsor",
+                path: "/sponsorship"
+            },
+            {
+                name: "Join Us",
+                path: "/get-involved/join"
+            }
+        ]
+    },
+    {
+        name: "Other",
+        items: [
+            {
+                name: "Contact",
+                path: "/contact"
+            },
+            {
+                name: "Partners",
+                path: "/#partners"
+            }
+        ]
+    }
+]
 
 export default function Footer() {
     // Returns the year for the copyright
@@ -13,30 +82,14 @@ export default function Footer() {
             <div className="grid grid-cols-12 mb-20">
                 <Image src={Logo} width={124} height={64} className="col-span-12 lg:col-span-2 pb-10" />
                 <div className="grid grid-cols-2 lg:grid-cols-4 col-span-12 lg:col-span-10 gap-y-10 gap-x-20 lg:gap-x-5">
-                    <div className="space-y-4">
-                        <h1 className="mb-7">About</h1>
-                        <p className="text-gray-400">Our Mission</p>
-                        <p className="text-gray-400">Team Members</p>
-                    </div>
-                    <div className="space-y-4">
-                        <h1 className="mb-7">Events</h1>
-                        <p className="text-gray-400">2023 Conference</p>
-                        <p className="text-gray-400">2022 Conference</p>
-                        <p className="text-gray-400">Boat Design</p>
-                        <p className="text-gray-400">Thunkable Workshop</p>
-                    </div>
-                    <div className="space-y-4">
-                        <h1 className="mb-7">Get Involved</h1>
-                        <p className="text-gray-400">Participate</p>
-                        <p className="text-gray-400">Sponsor</p>
-                        <p className="text-gray-400">Join Us</p>
-                    </div>
-                    <div className="space-y-4">
-                        <h1 className="mb-7">Other</h1>
-                        <p className="text-gray-400">Contact</p>
-                        <p className="text-gray-400">Articles</p>
-                        <p className="text-gray-400">Current Events</p>
-                    </div>
+                    {footerItems.map((section) => (
+                        <div key={section.name} className="flex flex-col space-y-4">
+                            <h1 className="mb-7">{section.name}</h1>
+                            {section.items.map((item) => (
+                                <Link key={item.path} href={item.path} className="text-gray-400">{item.name}</Link>
+                            ))}
+                        </div>
+                    ))}
                 </div>
             </div>
 

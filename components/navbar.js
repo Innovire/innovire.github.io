@@ -4,8 +4,8 @@ import Image from "next/image";
 import Logo from "../public/logo/black.png"
 import { AiOutlineMenu } from "react-icons/ai";
 
-// List of menu items
-const menuItems = [
+// List of navbar items
+const navbarItems = [
     {
         name: "About Us",
         path: "/about"
@@ -54,13 +54,13 @@ export default function Navbar() {
                 </div>
 
                 <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row mt-3 lg:mt-0 lg:text-md ml-auto`}>
-                    {menuItems.map((menuItem, i) => (
+                    {navbarItems.map((item, i) => (
                         <Link
                             className="text-[#454646] hover:text-[#004BC8] p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors"
-                            href={menuItem.path}
+                            href={item.path}
                             key={i}
                         >
-                            {menuItem.name}
+                            {item.name}
                         </Link>
                     ))}
 

@@ -106,7 +106,7 @@ export default function Home({ partners }) {
             </svg>
 
             {/* PARTNERS */}
-            <div className="w-full p-16 md:p-24 lg:p-20 pt-20">
+            <div id="partners" className="w-full p-16 md:p-24 lg:p-20 pt-20">
                 <h1 className="text-5xl text-center text-black font-bold">Affiliated With</h1>
                 <div className="mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-10 py-10">
                     {partners.map((partner) => (

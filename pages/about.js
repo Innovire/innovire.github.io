@@ -23,7 +23,7 @@ export default function About({ team }) {
             </div>
 
             {/* MISSION */}
-            <div className="flex flex-col p-10 pt-20 lg:p-20 lg:flex-row gap-5 lg:items-left">
+            <div id="mission" className="flex flex-col p-10 pt-20 lg:p-20 lg:flex-row gap-5 lg:items-left">
                 <div className="flex-col lg:items-start w-full lg:w-[55%] lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-4xl lg:text-6xl font-bold">
                         Our mission is to empower youth.
@@ -46,7 +46,7 @@ export default function About({ team }) {
             </div>
 
             {/* MEET THE COMMITTEE */}
-            <div className="flex flex-col items-center text-center px-20 pb-40">
+            <div id="team" className="flex flex-col items-center text-center px-20 pb-40">
                 <h1 className="text-6xl font-bold">
                     Meet the Committee
                 </h1>

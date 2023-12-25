@@ -30,7 +30,7 @@ export default function GetInvolved({ upcomingEventPath }) {
             </div>
 
             {/* PARTICIPATE IN OUR EVENTS */}
-            <div className="flex flex-col px-10 py-20 lg:p-20 bg-gray-100 font-karla font-semibold items-center lg:flex-row gap-20">
+            <div id="participate" className="flex flex-col px-10 py-20 lg:p-20 bg-gray-100 font-karla font-semibold items-center lg:flex-row gap-20">
                 {/* Heading and text */}
                 <div className="lg:items-start lg:w-1/2 lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-5xl lg:text-6xl">
@@ -78,7 +78,6 @@ export default function GetInvolved({ upcomingEventPath }) {
                         </Link>
                     </button>
                 </div>
-
             </div>
         </Layout>
     )
