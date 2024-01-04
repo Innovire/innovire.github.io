@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {CldImage} from "next-cloudinary";
+import { CldImage } from "next-cloudinary";
 
 export default function EventCard({ details }) {
     return (
@@ -9,14 +9,14 @@ export default function EventCard({ details }) {
                     src={`${details.path}/cover`}
                     height="1000"
                     width="1000"
-                    className="h-2/4 w-full rounded-t-md object-cover object-bottom"
+                    className="h-[30vh] w-full rounded-t-md object-cover"
                 />
                 <div className="h-1/4 w-full p-5 pb-3">
                     <h1 className="text-xl font-extrabold">{details.name}</h1>
                     <h2 className="text-md text-blue-500">{details.date}</h2>
                 </div>
                 <div className="h-1/4 w-full px-5 pb-5">
-                    <p className="text-sm text-gray-500">{details.description.substring(0, 85)}...</p>
+                    <p className="text-sm text-gray-500">{details.description.substring(0, 95)}...</p>
                 </div>
             </Link>
         </div>

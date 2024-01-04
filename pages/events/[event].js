@@ -1,14 +1,9 @@
 import { notion } from "@/pages";
 import Layout from "@/components/layout";
 import { CldImage } from "next-cloudinary";
+import { v2 as cloudinary } from "cloudinary";
 
-const images = [
-    { id: 1, size: "md:w-2/4" },
-    { id: 2, size: "md:w-1/4" },
-    { id: 3, size: "md:w-1/4" }
-]
-
-export default function Event({ event }) {
+export default function Event({ event, images }) {
     return (
         <Layout>
             <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 gap-10 place-items-center text-center lg:text-left">
@@ -24,7 +19,7 @@ export default function Event({ event }) {
                     src={`${event?.path}/cover`}
                     height="2000"
                     width="2000"
-                    className="h-[50vh] w-full rounded-lg object-cover object-bottom"
+                    className="h-[50vh] w-full rounded-lg object-cover"
                 />
 
                 {/* NAME */}
@@ -58,15 +53,15 @@ export default function Event({ event }) {
                 </div>
 
                 {/* IMAGES */}
-                {event?.status === "Past" ? (
-                    <div className="flex flex-col md:flex-row md:h-[50vh] gap-3">
+                {images ? (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                         {images.map((image) => (
                             <CldImage
-                                src={`${event.path}/${image.id}`}
-                                key={image.id}
+                                src={image.public_id}
+                                key={image.public_id}
                                 height="2000"
                                 width="2000"
-                                className={`${image.size} h-full rounded-lg object-cover object-center hover:shadow-xl`}
+                                className="h-[50vh] rounded-lg object-cover hover:shadow-xl"
                             />
                         ))}
                     </div>
@@ -105,7 +100,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const eventID = params.event;
 
-    // Get the event using the eventID
+    // Get the event details from notion using the eventID
     const response = await notion.databases.query({
         database_id: process.env.EVENTS_DB_ID,
         filter: {
@@ -121,7 +116,7 @@ export async function getStaticProps({ params }) {
         name: response.results[0].properties.Name.title[0].text.content,
         path: response.results[0].properties.Path.rich_text[0].plain_text,
         status: response.results[0].properties.Status.status.name,
-        date: response.results[0].properties.Date.date.start,
+        date: response.results[0].properties.Date.date?.start || "TBD",
         signup: response.results[0].properties.Signup?.url,
         video: response.results[0].properties.Video?.url,
         description: response.results[0].properties.Description.rich_text[0].plain_text,
@@ -129,9 +124,22 @@ export async function getStaticProps({ params }) {
         mentors: response.results[0].properties.Mentors.rich_text[0]?.plain_text || null
     };
 
+    // Get the event images from cloudinary using the eventID
+    cloudinary.config({
+        cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+        api_key: process.env.CLOUDINARY_API_KEY,
+        api_secret: process.env.CLOUDINARY_API_SECRET,
+        secure: true
+    });
+
+    // Filter the results to exclude the cover image
+    const result = await cloudinary.search.expression(`folder=${eventID}`).max_results(500).execute()
+    const images = result.resources.filter(i => !i.public_id.includes("cover")) || null
+
     return {
         props: {
-            event: eventDetails
+            event: eventDetails,
+            images: images
         }
     }
 }

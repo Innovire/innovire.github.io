@@ -31,7 +31,7 @@ export default function Events({ pastEvents, futureEvents }) {
             {/* PAST EVENTS */}
             <div className="flex flex-col px-10 lg:px-20 py-10">
                 <h1 className="text-5xl text-center md:text-left font-bold">Past Events</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-10">
                     {pastEvents.map((event) => (
                         <EventCard key={event.name} details={event} />
                     ))}
@@ -45,7 +45,7 @@ export default function Events({ pastEvents, futureEvents }) {
 export async function getStaticProps() {
     const response = await notion.databases.query({
         database_id: process.env.EVENTS_DB_ID,
-        sorts: [{ property: "Date", direction: "ascending" }]
+        sorts: [{ property: "Date", direction: "descending" }]
     });
 
     // Holds the past and future events
@@ -54,11 +54,12 @@ export async function getStaticProps() {
         "Upcoming": []
     }
 
+    // Get the details to display on each event's card
     response.results.forEach((result) => {
         const name = result.properties.Name.title[0].text.content;
         const path = result.properties.Path.rich_text[0].plain_text;
         const status = result.properties.Status.status.name;
-        const date = result.properties.Date.date.start;
+        const date = result.properties.Date.date?.start || "TBD";
         const description = result.properties.Description.rich_text[0].plain_text;
 
         events[status].push({
