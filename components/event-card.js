@@ -7,6 +7,7 @@ export default function EventCard({ details }) {
             <Link href={{ pathname: `events/${details.path}` }}>
                 <CldImage
                     src={`${details.path}/cover`}
+                    alt="Event Cover Image"
                     height="1000"
                     width="1000"
                     className="h-[30vh] w-full rounded-t-md object-cover"

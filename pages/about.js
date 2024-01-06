@@ -3,8 +3,9 @@ import {notion} from "@/pages/index";
 import Image from "next/image";
 
 export default function About({ team }) {
+    const pageDescription = "A registered non-profit organization, providing youth with opportunities to become future STEM leaders.";
     return (
-        <Layout>
+        <Layout title="Innovire - About" description={pageDescription}>
             {/* ABOUT US */}
             <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 gap-10 items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center lg:items-start w-full lg:w-[55%] text-center lg:text-left mb-4 lg:mb-0">
@@ -18,7 +19,7 @@ export default function About({ team }) {
                     </p>
                 </div>
                 <div className="flex flex-col w-full lg:w-[45%] items-end justify-center">
-                    <Image src="/images/undraw_team.svg" height={700} width={700} />
+                    <Image src="/images/undraw_team.svg" alt="Team Graphic" height={700} width={700} />
                 </div>
             </div>
 

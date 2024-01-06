@@ -42,7 +42,7 @@ export default function Navbar() {
             <div className="px-10 lg:flex w-full">
                 <div className="flex justify-between">
                     <Link href="/" className="flex flex-row items-center font-bold text-xl mr-auto">
-                        <Image src={Logo} alt="logo" width={124} height={64} />
+                        <Image src={Logo} alt="Logo" width={124} height={64} />
                     </Link>
 
                     <button

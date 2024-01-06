@@ -24,8 +24,9 @@ function PingEffect({ dotColor, pingColor }) {
 }
 
 export default function Join({ roles }) {
+    const pageDescription = "Help communities, gain volunteer hours, learn new skills, and have fun."
     return (
-        <Layout>
+        <Layout title="Innovire - Join Us" description={pageDescription}>
             {/* WHY INNOVIRE */}
             <div className="flex p-10 pt-20 lg:p-20 lg:pt-60 lg:gap-10 flex-col lg:flex-row lg:items-left">
                 <div className="flex-col lg:items-start w-full lg:w-2/3 lg:text-left mb-4 lg:mb-0">

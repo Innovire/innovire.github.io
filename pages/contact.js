@@ -32,8 +32,10 @@ const socialMedia = [
 ]
 
 export default function Contact() {
+    const pageDescription = "Contact us with any questions.";
+
     return (
-        <Layout>
+        <Layout title="Innovire - Contact" description={pageDescription}>
             <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 gap-5 items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left mb-4 lg:mb-0">
                     <h1 className="text-5xl lg:text-7xl font-bold">
@@ -44,7 +46,7 @@ export default function Contact() {
                     </p>
                 </div>
                 <div className="flex flex-col w-full lg:w-1/2 place-items-center lg:items-end">
-                    <Image height={700} width={700} src="/images/undraw_mail.svg" className="w-[80%] h-[70%]" />
+                    <Image height={700} width={700} src="/images/undraw_mail.svg" alt="Mail Graphic" className="w-[80%] h-[70%]" />
                 </div>
             </div>
 

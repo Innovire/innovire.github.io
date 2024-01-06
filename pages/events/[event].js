@@ -5,7 +5,7 @@ import { v2 as cloudinary } from "cloudinary";
 
 export default function Event({ event, images }) {
     return (
-        <Layout>
+        <Layout title={`Innovire - ${event.name}`} description={event.description}>
             <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 gap-10 place-items-center text-center lg:text-left">
                 {/* SIGNUP BANNER */}
                 {event?.signup ? (

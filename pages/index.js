@@ -6,8 +6,10 @@ import Layout from "@/components/layout";
 export const notion = new Client ({ auth: process.env.NOTION_API_KEY });
 
 export default function Home({ partners }) {
+    const pageDescription = "A group of ambitious youth aiming to make an impact through STEM.";
+
     return (
-        <Layout className="font-raleway">
+        <Layout title="Innovire" description={pageDescription} className="font-raleway">
             {/* HERO */}
             <header className="flex p-10 pt-20 lg:p-20 lg:pt-40 gap-5 flex-col items-center lg:flex-row lg:items-left">
                 <div className="flex-col place-items-center lg:items-start w-4/5 text-center lg:text-left mb-4 lg:mb-0">
@@ -25,7 +27,7 @@ export default function Home({ partners }) {
                     </button>
                 </div>
                 <div className="flex flex-col w-2/3 items-end">
-                    <Image src="/images/hero-powerful.svg" height={700} width={700}/>
+                    <Image src="/images/hero-powerful.svg" height={700} width={700} alt="Inspiration Graphic"/>
                 </div>
             </header>
 

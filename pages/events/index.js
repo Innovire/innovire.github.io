@@ -3,8 +3,10 @@ import Layout from "@/components/layout";
 import EventCard from "@/components/event-card";
 
 export default function Events({ pastEvents, futureEvents }) {
+    const pageDescription = "Check out some of our past events.";
+
     return (
-        <Layout>
+        <Layout title="Innovire - Events" description={pageDescription}>
             {/* HERO */}
             <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 gap-5 items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center lg:items-start w-full lg:w-[55%] text-center lg:text-left mb-4 lg:mb-0">
