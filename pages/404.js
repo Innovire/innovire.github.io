@@ -7,19 +7,10 @@ export default function Custom404() {
         <>
             <Head>
                 <title>Innovire - 404</title>
-                <meta name="robots" content="all" />
+                <meta name="robots" content="noindex,nofollow" />
             </Head>
 
             <h1>404 - Page Not Found</h1>;
         </>
     )
-}
-
-export async function getStaticProps() {
-    return {
-        redirect: {
-            destination: '/',
-            permanent: true, // triggers 308
-        },
-    };
 }
