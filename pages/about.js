@@ -4,6 +4,7 @@ import Image from "next/image";
 
 export default function About({ team }) {
     const pageDescription = "A registered non-profit organization, providing youth with opportunities to become future STEM leaders.";
+
     return (
         <Layout title="Innovire - About" description={pageDescription}>
             {/* ABOUT US */}

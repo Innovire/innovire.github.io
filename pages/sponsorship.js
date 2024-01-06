@@ -4,7 +4,7 @@ export default function Sponsorship() {
     const pageDescription = "Support us in our journey of helping communities through STEM.";
 
     return (
-        <Layout title="Innovire - Sponsor" description={pageDescription}>
+        <Layout title="Innovire - Sponsorships" description={pageDescription}>
             {/* HERO */}
             <div className="flex p-10 pt-20 lg:p-20 lg:pt-60 gap-5 flex-col items-center lg:flex-row lg:items-left">
                 <div className="flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left mb-4 lg:mb-0">
