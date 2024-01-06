@@ -52,7 +52,7 @@ export default function Sponsorship() {
 
             {/* SPONSORSHIP PACKAGE */}
             <div>
-                <embed
+                <iframe
                     src="/pdfs/2022%20Innovire%20Sponsorship%20Package.pdf"
                     className="p-10 lg:p-20 w-full h-[1000px]"
                 />
