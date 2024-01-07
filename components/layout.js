@@ -13,6 +13,9 @@ export default function Layout({ title, description, children }) {
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content="https://new-website-innovire.vercel.app/images/ogImage.JPG" />
                 <meta property="og:url" content="https://new-website-innovire.vercel.app/" />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:image" content="https://new-website-innovire.vercel.app/images/ogImage.JPG" />
+                <meta property="twitter:site" content="https://new-website-innovire.vercel.app/" />
             </Head>
 
             <motion.div
