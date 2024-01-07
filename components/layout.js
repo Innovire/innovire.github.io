@@ -10,7 +10,7 @@ export default function Layout({ title, description, children }) {
                 <meta name="description" content={description} key="desc" />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content="https://new-website-innovire.vercel.app/images/participate.JPG" />
+                <meta property="og:image" content="https://new-website-innovire.vercel.app/images/linkPreview.JPG" />
             </Head>
 
             <motion.div
