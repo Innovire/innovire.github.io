@@ -75,6 +75,16 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          EVENTS_DB_ID: ${{ secrets.EVENTS_DB_ID }}
+          NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
+          NEXT_PUBLIC_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORM_ID }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          PARTNERS_DB_ID: ${{ secrets.PARTNERS_DB_ID }}
+          ROLES_DB_ID: ${{ secrets.ROLES_DB_ID }}
+          TEAM_DB_ID: ${{ secrets.TEAM_DB_ID }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
@@ -93,14 +103,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Load env variables
-        env:
-          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
-          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
-          EVENTS_DB_ID: ${{ secrets.EVENTS_DB_ID }}
-          NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
-          NEXT_PUBLIC_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORM_ID }}
-          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-          PARTNERS_DB_ID: ${{ secrets.PARTNERS_DB_ID }}
-          ROLES_DB_ID: ${{ secrets.ROLES_DB_ID }}
-          TEAM_DB_ID: ${{ secrets.TEAM_DB_ID }}
