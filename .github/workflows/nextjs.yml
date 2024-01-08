@@ -85,8 +85,6 @@ jobs:
           PARTNERS_DB_ID: ${{ secrets.PARTNERS_DB_ID }}
           ROLES_DB_ID: ${{ secrets.ROLES_DB_ID }}
           TEAM_DB_ID: ${{ secrets.TEAM_DB_ID }}
-      - name: Static HTML export with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
