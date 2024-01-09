@@ -2,13 +2,7 @@
 const nextConfig = {
     output: 'export',
     images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'res.cloudinary.com',
-                pathname: '**'
-            }
-        ]
+        domains: ['res.cloudinary.com']
     }
 }
 

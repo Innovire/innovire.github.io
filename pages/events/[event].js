@@ -133,8 +133,8 @@ export async function getStaticProps({ params }) {
     });
 
     // Filter the results to exclude the cover image
-    const result = await cloudinary.search.expression(`folder=${eventID}`).max_results(500).execute()
-    const images = result.resources.filter(i => !i.public_id.includes("cover")) || null
+    const result = await cloudinary.search.expression(`folder=${eventID}`).max_results(500).execute();
+    const images = result.resources.filter(i => !i.public_id.includes("cover")) || null;
 
     return {
         props: {

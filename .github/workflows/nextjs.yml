@@ -12,18 +12,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Environment variables from GitHub secrets
-env:
-  CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
-  CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
-  EVENTS_DB_ID: ${{ secrets.EVENTS_DB_ID }}
-  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
-  NEXT_PUBLIC_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORM_ID }}
-  NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-  PARTNERS_DB_ID: ${{ secrets.PARTNERS_DB_ID }}
-  ROLES_DB_ID: ${{ secrets.ROLES_DB_ID }}
-  TEAM_DB_ID: ${{ secrets.TEAM_DB_ID }}
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -87,6 +75,16 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
+          NEXT_PUBLIC_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORM_ID }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          EVENTS_DB_ID: ${{ secrets.EVENTS_DB_ID }}
+          PARTNERS_DB_ID: ${{ secrets.PARTNERS_DB_ID }}
+          ROLES_DB_ID: ${{ secrets.ROLES_DB_ID }}
+          TEAM_DB_ID: ${{ secrets.TEAM_DB_ID }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
