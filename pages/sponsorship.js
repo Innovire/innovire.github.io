@@ -53,7 +53,7 @@ export default function Sponsorship() {
             {/* SPONSORSHIP PACKAGE */}
             <div>
                 <iframe
-                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://new-website-innovire.vercel.app/pdfs/2022%20Innovire%20Sponsorship%20Package.pdf"
+                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://innovire.ca/pdfs/2022%20Innovire%20Sponsorship%20Package.pdf"
                     className="p-10 lg:p-20 w-full h-[1000px]"
                 />
             </div>
