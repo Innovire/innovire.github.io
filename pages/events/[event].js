@@ -2,8 +2,15 @@ import { notion } from "@/pages";
 import Layout from "@/components/layout";
 import { CldImage } from "next-cloudinary";
 import { v2 as cloudinary } from "cloudinary";
+import {useEffect, useState} from "react";
 
 export default function Event({ event, images }) {
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
     return (
         <Layout title={`Innovire - ${event.name}`} description={event.description}>
             <div className="flex flex-col p-10 pt-20 lg:p-20 lg:pt-40 gap-10 place-items-center text-center lg:text-left">
@@ -15,12 +22,14 @@ export default function Event({ event, images }) {
                 ): null}
 
                 {/* COVER */}
-                <CldImage
-                    src={`${event?.path}/cover`}
-                    height="2000"
-                    width="2000"
-                    className="h-[50vh] w-full rounded-lg object-cover"
-                />
+                {isClient ? (
+                    <CldImage
+                        src={`${event?.path}/cover`}
+                        height="2000"
+                        width="2000"
+                        className="h-[50vh] w-full rounded-lg object-cover"
+                    />
+                ) : null}
 
                 {/* NAME */}
                 {event?.name ? (
@@ -53,7 +62,7 @@ export default function Event({ event, images }) {
                 </div>
 
                 {/* IMAGES */}
-                {images ? (
+                {images && isClient ? (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                         {images.map((image) => (
                             <CldImage
