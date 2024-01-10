@@ -2,14 +2,14 @@ import { notion } from "@/pages";
 import Layout from "@/components/layout";
 import { CldImage } from "next-cloudinary";
 import { v2 as cloudinary } from "cloudinary";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export default function Event({ event, images }) {
-    const [isClient, setIsClient] = useState(false)
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
         setIsClient(true)
-    }, [])
+    }, []);
 
     return (
         <Layout title={`Innovire - ${event.name}`} description={event.description}>

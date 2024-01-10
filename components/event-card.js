@@ -3,11 +3,11 @@ import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
 
 export default function EventCard({ details }) {
-    const [isClient, setIsClient] = useState(false)
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
         setIsClient(true)
-    }, [])
+    }, []);
 
     return (
         <div className="flex flex-col h-fit w-full rounded-md shadow-md hover:shadow-xl font-karla font-bold">
