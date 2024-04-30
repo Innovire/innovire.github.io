@@ -110,7 +110,7 @@ export default function Home({ partners }) {
             {/* PARTNERS */}
             <div id="partners" className="w-full p-16 md:p-24 lg:p-20 pt-20">
                 <h1 className="text-5xl text-center text-black font-bold">Affiliated With</h1>
-                <div className="mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-10 py-10">
+                <div className="mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10 py-10">
                     {partners.map((partner) => (
                         <Link key={partner.name} href={partner.website}>
                             <Image
@@ -119,7 +119,7 @@ export default function Home({ partners }) {
                                 quality={100}
                                 height={500}
                                 width={500}
-                                className="h-[40px] w-auto mx-auto object-center hover:brightness-110"
+                                className="h-[50px] w-auto mx-auto object-center hover:brightness-110"
                             />
                         </Link>
                     ))}
