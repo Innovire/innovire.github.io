@@ -156,7 +156,8 @@ export default function Home({ partners }) {
 // Get the list of partners with their logo and website from Notion
 export async function getStaticProps() {
     const response = await notion.databases.query({
-        database_id: process.env.PARTNERS_DB_ID
+        database_id: process.env.PARTNERS_DB_ID,
+        sorts: [{ property: "Priority", direction: "ascending"}]
     });
 
     const partnersList = [];
