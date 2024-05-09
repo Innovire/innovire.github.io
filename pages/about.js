@@ -49,9 +49,7 @@ export default function About({ executives, board, founders }) {
 
             {/* MEET THE COMMITTEE */}
             <div id="team" className="flex flex-col items-center text-center px-20 pb-40">
-                <h1 className="text-6xl font-bold">
-                    Meet the Committee
-                </h1>
+                <h1 className="text-6xl font-bold">Meet the Committee</h1>
                 <p className="font-karla font-semibold lg:w-2/4 text-xl text-gray-500 pt-10">
                     We have over 30 driven members in the team. Here are the ones who bring it all together.
                 </p>
@@ -77,14 +75,12 @@ export default function About({ executives, board, founders }) {
 
             {/* BOARD OF DIRECTORS */}
             <div id="team" className="flex flex-col items-center text-center px-20 pb-40">
-                <h1 className="text-6xl font-bold">
-                    Board of Directors
-                </h1>
+                <h1 className="text-6xl font-bold">Board of Directors</h1>
 
                 {/* PHOTOS */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-40 lg:gap-x-20 pt-20">
                     {board.map((director) => (
-                        <div key={director.name} className="h-[250px] w-[240px]">
+                        <div key={director.name} className="h-[250px] w-[250px]">
                             <Image
                                 src={director.photo}
                                 alt={director.name}
@@ -101,9 +97,7 @@ export default function About({ executives, board, founders }) {
 
             {/* FOUNDERS */}
             <div id="team" className="flex flex-col items-center text-center px-20 pb-40">
-                <h1 className="text-6xl font-bold">
-                    Founders
-                </h1>
+                <h1 className="text-6xl font-bold">Founders</h1>
 
                 {/* PHOTOS */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-40 lg:gap-x-20 pt-20">
