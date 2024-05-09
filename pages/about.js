@@ -2,7 +2,7 @@ import Layout from "@/components/layout";
 import {notion} from "@/pages/index";
 import Image from "next/image";
 
-export default function About({ team }) {
+export default function About({ executives, board, founders }) {
     const pageDescription = "A registered non-profit organization, providing youth with opportunities to become future STEM leaders.";
 
     return (
@@ -56,9 +56,9 @@ export default function About({ team }) {
                     We have over 30 driven members in the team. Here are the ones who bring it all together.
                 </p>
 
-                {/* EXECUTIVE PHOTOS */}
+                {/* PHOTOS */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-40 lg:gap-x-20 pt-20">
-                    {team.map((executive) => (
+                    {executives.map((executive) => (
                         <div key={executive.name} className="h-[250px] w-[250px]">
                             <Image
                                 src={executive.photo}
@@ -74,29 +74,108 @@ export default function About({ team }) {
                     ))}
                 </div>
             </div>
+
+            {/* BOARD OF DIRECTORS */}
+            <div id="team" className="flex flex-col items-center text-center px-20 pb-40">
+                <h1 className="text-6xl font-bold">
+                    Board of Directors
+                </h1>
+
+                {/* PHOTOS */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-40 lg:gap-x-20 pt-20">
+                    {board.map((director) => (
+                        <div key={director.name} className="h-[250px] w-[240px]">
+                            <Image
+                                src={director.photo}
+                                alt={director.name}
+                                quality={100}
+                                height={500}
+                                width={500}
+                                className="w-full h-full rounded-full object-cover"
+                            />
+                            <h1 className="font-raleway font-bold text-2xl mt-4 text-center">{director.name}</h1>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* FOUNDERS */}
+            <div id="team" className="flex flex-col items-center text-center px-20 pb-40">
+                <h1 className="text-6xl font-bold">
+                    Founders
+                </h1>
+
+                {/* PHOTOS */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-40 lg:gap-x-20 pt-20">
+                    {founders.map((founder) => (
+                        <div key={founder.name} className="h-[250px] w-[250px]">
+                            <Image
+                                src={founder.photo}
+                                alt={founder.name}
+                                quality={100}
+                                height={500}
+                                width={500}
+                                className="w-full h-full rounded-full object-cover"
+                            />
+                            <h1 className="font-raleway font-bold text-2xl mt-4 text-center">{founder.name}</h1>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </Layout>
     )
 }
 
-// Get the list of executive team members with their photo and role from Notion
+// Get the list of team members with their photo and role from Notion
 export async function getStaticProps() {
-    const response = await notion.databases.query({
-        database_id: process.env.TEAM_DB_ID,
-        sorts: [{ property: "Priority", direction: "descending"}]
+    // Executive Team
+    const execResponse = await notion.databases.query({
+        database_id: process.env.EXECUTIVES_DB_ID,
+        sorts: [{ property: "Priority", direction: "ascending"}]
     });
 
-    const teamList = [];
-    response.results.forEach((result) => {
-        teamList.push({
+    const execList = [];
+    execResponse.results.forEach((result) => {
+        execList.push({
             name: result.properties.Name.title[0].text.content,
             role: result.properties.Role.rich_text[0].text.content,
             photo: result.properties.Photo.url
         })
     })
 
+    // Board of Directors
+    const boardResponse = await notion.databases.query({
+        database_id: process.env.BOARD_DB_ID,
+        sorts: [{ property: "Priority", direction: "ascending"}]
+    });
+
+    const boardList = [];
+    boardResponse.results.forEach((result) => {
+        boardList.push({
+            name: result.properties.Name.title[0].text.content,
+            photo: result.properties.Photo.url
+        })
+    })
+
+    // Founders
+    const foundersResponse = await notion.databases.query({
+        database_id: process.env.FOUNDERS_DB_ID,
+        sorts: [{ property: "Priority", direction: "ascending"}]
+    });
+
+    const foundersList = [];
+    foundersResponse.results.forEach((result) => {
+        foundersList.push({
+            name: result.properties.Name.title[0].text.content,
+            photo: result.properties.Photo.url
+        })
+    })
+
     return {
         props: {
-            team: teamList.reverse()
+            executives: execList,
+            board: boardList,
+            founders: foundersList
         }
     }
 }

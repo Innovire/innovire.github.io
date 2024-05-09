@@ -84,7 +84,9 @@ jobs:
           EVENTS_DB_ID: ${{ secrets.EVENTS_DB_ID }}
           PARTNERS_DB_ID: ${{ secrets.PARTNERS_DB_ID }}
           ROLES_DB_ID: ${{ secrets.ROLES_DB_ID }}
-          TEAM_DB_ID: ${{ secrets.TEAM_DB_ID }}
+          EXECUTIVES_DB_ID: ${{ secrets.EXECUTIVES_DB_ID }}
+          BOARD_DB_ID: ${{ secrets.BOARD_DB_ID }}
+          FOUNDERS_DB_ID: ${{ secrets.FOUNDERS_DB_ID }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
