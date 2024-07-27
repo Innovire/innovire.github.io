@@ -17,9 +17,11 @@ export default function Events({ pastEvents, futureEvents }) {
             )
         } else {
             return (
-                <p className="font-karla font-semibold leading-loose text-pg text-gray-500 pt-10">
-                    No upcoming events as of now. Stay tuned!
-                </p>
+                <div className="text-center lg:text-left">
+                    <p className="font-karla font-semibold leading-loose text-pg text-gray-500 pt-10">
+                        No upcoming events as of now. Stay tuned!
+                    </p>
+                </div>
             )
         }
     }
