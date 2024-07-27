@@ -1,9 +1,8 @@
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Link from "next/link";
-import { notion } from "@/pages";
 
-export default function GetInvolved({ upcomingEventPath }) {
+export default function GetInvolved()  {
     const pageDescription = "Participate in our community events or join the team.";
 
     // Returns the year
@@ -44,7 +43,7 @@ export default function GetInvolved({ upcomingEventPath }) {
                     </p>
 
                     <button className="font-karla text-xl font-extrabold py-4 px-7 my-2 text-white bg-[#004BC8] hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-blue-400 duration-[400ms,700ms] transition-[color,box-shadow] text-center rounded">
-                        <Link href={`events/${upcomingEventPath}`}>
+                        <Link href="events/">
                             Get Started
                         </Link>
                     </button>
@@ -83,25 +82,4 @@ export default function GetInvolved({ upcomingEventPath }) {
             </div>
         </Layout>
     )
-}
-
-// Get the path for the upcoming event
-export async function getStaticProps() {
-    const response = await notion.databases.query({
-        database_id: process.env.EVENTS_DB_ID,
-        sorts: [{ property: "Date", direction: "ascending" }]
-    });
-
-    let upcomingEventPath;
-    response.results.forEach((result) => {
-        if (result.properties.Status.status.name === "Upcoming") {
-            upcomingEventPath = result.properties.Path.rich_text[0].plain_text;
-        }
-    })
-
-    return {
-        props: {
-            upcomingEventPath
-        }
-    }
 }
